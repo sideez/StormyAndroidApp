@@ -4,6 +4,7 @@ import com.sideez.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 
 /**
@@ -86,11 +87,10 @@ public class CurrentWeather {
 
     public String getFormattedTime() {
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a", Locale.US);
         simpleDateFormat.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
-        String timeString = simpleDateFormat.format(new Date(getTime() * 1000));
 
-        return timeString;
+        return simpleDateFormat.format(new Date(getTime() * 1000));
     }
 
     public void setTime(long time) {
