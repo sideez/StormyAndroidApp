@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(Response response) throws IOException {
                     try {
                         String jsonData = response.body().string();
-                        Log.v(TAG, jsonData);
                         if (response.isSuccessful()) {
                             mCurrentWeather = getCurrentDetails(jsonData);
                         } else {
@@ -68,9 +67,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {
+
         JSONObject forecast = new JSONObject(jsonData);
 
-        return new CurrentWeather();
+        String timezone = forecast.getString("timezone");
+
+        JSONObject currently = forecast.getJSONObject("currently");
+
+        CurrentWeather currentWeather = new CurrentWeather();
+        currentWeather.setHumidity(currently.getDouble("humidity"));
+        currentWeather.setTime(currently.getLong("time"));
+        currentWeather.setIcon(currently.getString("icon"));
+        currentWeather.setPrecipChance(currently.getDouble("precipProbability"));
+        currentWeather.setSummary(currently.getString("summary"));
+        currentWeather.setTemperature(currently.getDouble("temperature"));
+        currentWeather.setTimeZone(timezone);
+
+        return currentWeather;
     }
 
     private boolean isNetworkAvailable() {
