@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temp_value"
+        android:text="@string/value_placeholder"
         android:id="@+id/tempValue"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temp_label"
+        android:text="@string/label_placeholder"
         android:id="@+id/timeLabel"
         android:layout_alignTop="@+id/tempValue"
         android:layout_centerHorizontal="true"
@@ -90,7 +90,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/humidity_value"
+                android:text="@string/value_placeholder"
                 android:id="@+id/humidityValue"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"/>
@@ -113,7 +113,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/precip_value"
+                android:text="@string/value_placeholder"
                 android:id="@+id/precipValue"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"/>
@@ -123,7 +123,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/summary_label"
+        android:text="@string/refresh_msg"
         android:id="@+id/summaryLabel"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
