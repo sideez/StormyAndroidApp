@@ -15,4 +15,5 @@
     <string name="precip_label">Rain/Snow?</string>
     <string name="degree_icon_des">Degree icon</string>
     <string name="weather_icon_des">Weather Icon</string>
+    <string name="refresh_btn_des">Refresh Image</string>
 </resources>
