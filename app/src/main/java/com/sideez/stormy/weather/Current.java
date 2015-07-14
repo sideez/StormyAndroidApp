@@ -2,7 +2,7 @@
  * Copyright (c) 2015. Sideez Inc.
  */
 
-package com.sideez.stormy.model;
+package com.sideez.stormy.weather;
 
 import com.sideez.stormy.R;
 
@@ -14,7 +14,7 @@ import java.util.TimeZone;
 /**
  * Created by sideez on 2015-07-05.
  */
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private long mTime;
     private double mTemperature;
