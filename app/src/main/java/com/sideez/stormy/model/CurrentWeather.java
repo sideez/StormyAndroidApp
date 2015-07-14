@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015. Sideez Inc.
+ */
+
 package com.sideez.stormy.model;
 
 import com.sideez.stormy.R;
