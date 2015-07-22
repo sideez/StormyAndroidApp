@@ -20,4 +20,6 @@
     <string name="degree_icon_des">Degree icon</string>
     <string name="weather_icon_des">Weather Icon</string>
     <string name="refresh_btn_des">Refresh Image</string>
+    <string name="title_activity_daily_forecast">DailyForecastActivity</string>
+    <string name="no_daily_forecast">There is no data to display</string>
 </resources>
