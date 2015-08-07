@@ -14,6 +14,9 @@ import android.widget.TextView;
 import com.sideez.stormy.R;
 import com.sideez.stormy.weather.Hour;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by sideez on 2015-07-24.
  */
@@ -45,18 +48,14 @@ public class HourAdapeter extends RecyclerView.Adapter<HourAdapeter.HourViewHold
 
     public class HourViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mTimeLabel;
-        public TextView mSummaryLabel;
-        public TextView mTemperatureLabel;
-        public ImageView mIconImageView;
+        @Bind(R.id.timeLabel) TextView mTimeLabel;
+        @Bind(R.id.summaryLabel) TextView mSummaryLabel;
+        @Bind(R.id.temperatureLabel) TextView mTemperatureLabel;
+        @Bind(R.id.iconImageView) ImageView mIconImageView;
 
         public HourViewHolder(View itemView) {
             super(itemView);
-
-            mTimeLabel = (TextView) itemView.findViewById(R.id.timeLabel);
-            mSummaryLabel = (TextView) itemView.findViewById(R.id.summaryLabel);
-            mTemperatureLabel = (TextView) itemView.findViewById(R.id.temperatureLabel);
-            mIconImageView = (ImageView) itemView.findViewById(R.id.iconImageView);
+            ButterKnife.bind(this, itemView);
         }
 
         // Binding the data
